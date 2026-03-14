@@ -25,7 +25,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: black;
+        background: rgb(19, 19, 19);
       }
 
       header {
@@ -36,10 +36,12 @@
       }
 
       .profile-pic {
-        border-radius: 50%;
-        width: 170px;
-        height: 170px;
-        object-fit: cover;
+        width: 440px;
+        height: 240px;
+        padding: 0;
+        margin: 0;
+        object-fit: contain;
+        object-position: center;
         margin-bottom: 1rem;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
       }
@@ -137,11 +139,7 @@
 
   <body>
     <header>
-      <img
-        class="profile-pic"
-        src="img/profile_pic.jpg"
-        alt="Profile Picture"
-      />
+      <img class="profile-pic" src="img/watchlogo.png" alt="Profile Picture" />
 
       <h1>Watchtower 91 Security</h1>
       <p>Security Guard Service</p>
