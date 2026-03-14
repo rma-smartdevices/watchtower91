@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThriveNFC</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #222;
+      }
+
+      header {
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem 1rem 1rem;
+        width: 100%;
+      }
+
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 20%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      }
+
+      h1 {
+        margin: 0.3em 0;
+        font-size: clamp(1.6rem, 4vw, 2rem);
+      }
+
+      p {
+        color: #bbb;
+        margin: 0.3em 0 1.2em 0;
+      }
+
+      .links {
+        width: 90%;
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 40px;
+      }
+
+      .link {
+        display: grid;
+        grid-template-columns: 40px 1fr 40px;
+        align-items: center;
+        background: white;
+        padding: 14px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #222;
+        font-weight: bold;
+        transition: 0.25s;
+      }
+
+      .link:hover {
+        background: #ddd;
+      }
+
+      .link-logo {
+        width: 22px;
+        height: 22px;
+        justify-self: center;
+      }
+
+      .link span {
+        text-align: center;
+      }
+
+      footer {
+        margin-top: auto;
+        width: 100%;
+        background: #111;
+        color: #bbb;
+        text-align: center;
+        padding: 14px 10px;
+        font-size: 14px;
+      }
+
+      footer span {
+        color: white;
+        font-weight: bold;
+      }
+
+      footer a {
+        color: #4da6ff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Mobile tweaks */
+
+      @media (max-width: 480px) {
+        .profile-pic {
+          width: 100px;
+          height: 100px;
+        }
+
+        .link {
+          padding: 12px;
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img
+        class="profile-pic"
+        src="img/profile_pic.jpg"
+        alt="Profile Picture"
+      />
+
+      <h1>Watchtower 91 Security</h1>
+      <p>Security Guard Service</p>
+
+      <a href="https://maps.apple/r/-Cmd6AGPjWMUs0">
+        <p>📍410 Avenida Monte Sol, Fajardo, Puerto Rico</p>
+      </a>
+    </header>
+
+    <div class="links">
+      <a class="link" href="https://facebook.com/watchtower91" target="_blank">
+        <img class="link-logo" src="img/facebook.png" alt="Facebook logo" />
+        <span>Facebook</span>
+        <div></div>
+      </a>
+
+      <a
+        class="link"
+        href="https://instagram.com/watchtower91security"
+        target="_blank"
+      >
+        <img class="link-logo" src="img/gram_logo.png" alt="Instagram logo" />
+        <span>Instagram</span>
+        <div></div>
+      </a>
+
+      <a class="link" href="tel:+17873407000">
+        <img class="link-logo" src="img/contact_logo.png" alt="Phone logo" />
+        <span>Contact</span>
+        <div></div>
+      </a>
+
+      <a class="link" href="mailto:watchtower091@gmail.com">
+        <img class="link-logo" src="img/mail_logo.png" alt="Email logo" />
+        <span>Email</span>
+        <div></div>
+      </a>
+    </div>
+
+    <footer>
+      <p>© 2026 <span>ThriveNFC</span>. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
