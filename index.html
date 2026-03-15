@@ -11,6 +11,9 @@
       }
       html {
         margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
       }
 
       a {
@@ -122,13 +125,16 @@
       /* Mobile tweaks */
 
       @media (max-width: 800px) {
-        .html {
+        .html,
+        body {
           margin: 0;
           padding: 0;
+          height: 100%;
+          overflow: hidden;
         }
         .profile-pic {
-          width: 150px;
-          height: 140px;
+          width: 200px;
+          height: 160px;
         }
 
         .link {
