@@ -244,5 +244,39 @@
     <footer>
       <p>© 2026 <span>ThriveNFC</span>. All Rights Reserved.</p>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const emailLink = document.querySelector('a[href^="mailto:"]');
+
+        if (!emailLink) return;
+
+        emailLink.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const email = "watchtower091@gmail.com";
+          const subject = encodeURIComponent("Security Inquiry");
+          const body = encodeURIComponent("");
+
+          const ua = navigator.userAgent.toLowerCase();
+          let url;
+
+          if (ua.includes("android")) {
+            url = `https://mail.google.com/mail/?view=cm&to=${email}&su=${subject}&body=${body}`;
+          } else if (ua.includes("windows")) {
+            url = `https://outlook.live.com/mail/0/deeplink/compose?to=${email}&subject=${subject}&body=${body}`;
+          } else if (
+            ua.includes("iphone") ||
+            ua.includes("ipad") ||
+            ua.includes("mac")
+          ) {
+            url = `mailto:${email}?subject=${subject}&body=${body}`;
+          } else {
+            url = `mailto:${email}?subject=${subject}&body=${body}`;
+          }
+
+          window.location.href = url;
+        });
+      });
+    </script>
   </body>
 </html>
