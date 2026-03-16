@@ -34,17 +34,18 @@
       }
 
       header {
-        color: #eaeaea;
+        color: #f0ecec;
         text-align: center;
         padding: 2rem 1rem 1rem 1rem;
-        width: 100%;
+        max-width: 420px;
+        animation: fadeIn 0.5s ease forwards;
       }
 
       .profile-pic {
         width: 150px;
-        height: 200px;
+        height: 170px;
         object-fit: contain;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
       }
 
@@ -54,7 +55,7 @@
       }
 
       p {
-        color: #eaeaea;
+        color: #adaaa8;
         margin: 0.3em 0 1.2em 0;
       }
 
@@ -65,23 +66,25 @@
         flex-direction: column;
         gap: 12px;
         margin-bottom: 40px;
+        animation: fadeIn 0.6s ease forwards;
       }
 
       .link {
         display: grid;
         grid-template-columns: 40px 1fr 40px;
         align-items: center;
-        background: #eaeaea;
+        background: #f0ecec;
         padding: 14px;
         border-radius: 14px;
         text-decoration: none;
         color: #222;
         font-weight: bold;
-        transition: 0.25s;
+        transition: all 0.2s ease;
       }
 
       .link:hover {
         background: #ddd;
+        filter: brightness(1.2);
         transform: translateY(-2px);
       }
 
@@ -98,15 +101,20 @@
       footer {
         margin-top: auto;
         width: 100%;
-        background: #111;
-        color: #bbb;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0)
+        );
+        color: #9ca3af;
         text-align: center;
         padding: 14px 10px;
         font-size: 14px;
+        animation: fadeIn 0.7s ease forwards;
       }
 
       footer span {
-        color: white;
+        color: #f0ecec;
         font-weight: bold;
       }
 
@@ -121,6 +129,7 @@
 
       #titlecolor {
         color: red;
+        text-shadow: 0 0 6px rgba(255, 0, 0, 0.5);
       }
       h4 {
         margin-top: 0;
@@ -149,6 +158,18 @@
         margin-left: 10px;
       }
 
+      /*Load Animation*/
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       /* Mobile tweaks */
 
       @media (max-width: 800px) {
@@ -160,13 +181,14 @@
           overflow: hidden;
         }
         .profile-pic {
-          width: 135px;
-          height: 150px;
+          width: 140px;
+          height: 130px;
         }
 
         .link {
           padding: 12px;
           font-size: 15px;
+          margin-bottom: 0.25em;
         }
         h4 {
           margin-top: 0;
@@ -209,6 +231,18 @@
     </header>
 
     <div class="links">
+      <a class="link" href="tel:+17873407000">
+        <img class="link-logo" src="img/contact_logo.png" alt="Phone logo" />
+        <span>Contact</span>
+        <div></div>
+      </a>
+
+      <a class="link" href="mailto:watchtower091@gmail.com">
+        <img class="link-logo" src="img/mail_logo.png" alt="Email logo" />
+        <span>Email</span>
+        <div></div>
+      </a>
+
       <a class="link" href="https://facebook.com/watchtower91" target="_blank">
         <img class="link-logo" src="img/facebook.png" alt="Facebook logo" />
         <span>Facebook</span>
@@ -224,20 +258,7 @@
         <span>Instagram</span>
         <div></div>
       </a>
-
-      <a class="link" href="tel:+17873407000">
-        <img class="link-logo" src="img/contact_logo.png" alt="Phone logo" />
-        <span>Contact</span>
-        <div></div>
-      </a>
-
-      <a class="link" href="mailto:watchtower091@gmail.com">
-        <img class="link-logo" src="img/mail_logo.png" alt="Email logo" />
-        <span>Email</span>
-        <div></div>
-      </a>
     </div>
-
     <footer>
       <p>© 2026 <span>ThriveNFC</span>. All Rights Reserved.</p>
     </footer>
